@@ -31,6 +31,7 @@ declare global {
   const cva: typeof import('class-variance-authority').cva
   const date: typeof import('zod').date
   const debounce: typeof import('lodash-es').debounce
+  const env: typeof import('./src/common/utils/EnvironmentUtil').env
   const format: typeof import('date-fns').format
   const forwardRef: typeof import('react').forwardRef
   const lazy: typeof import('react').lazy

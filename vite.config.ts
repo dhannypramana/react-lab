@@ -10,6 +10,7 @@ export default defineConfig(({ mode }) => {
     const port = !Number.isNaN(Number(env.VITE_APP_PORT)) ? Number(env.VITE_APP_PORT) : 8000;
 
     return {
+        envDir: './environments',
         resolve: {
             alias: {
                 '@': path.resolve(__dirname, 'src'),
