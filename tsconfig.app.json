@@ -13,6 +13,7 @@
         "moduleResolution": "bundler",
         "paths": {
             "@/*": ["./src/*"],
+            "@common": ["./src/common/*"],
             "@root/*": ["./*"],
             "@common/components": ["./src/common/components"]
         },
