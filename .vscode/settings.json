@@ -109,5 +109,8 @@
     "[jsonc]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
-    "cSpell.words": []
+    "cSpell.words": [
+        "Dhanny",
+        "Pramana"
+    ]
 }
