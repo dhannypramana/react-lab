@@ -87,6 +87,7 @@ declare global {
   const useSearchParams: typeof import('react-router-dom').useSearchParams
   const useState: typeof import('react').useState
   const useSyncExternalStore: typeof import('react').useSyncExternalStore
+  const useTransformedParams: typeof import('./src/common/hooks/useTransformedParams').useTransformedParams
   const useTransition: typeof import('react').useTransition
   const useTranslation: typeof import('react-i18next').useTranslation
   const zEnum: typeof import('zod').enum

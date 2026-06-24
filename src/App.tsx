@@ -1,7 +1,9 @@
+import routes from '~react-pages';
+
 export default function App() {
     return (
-        <h1>
-            Hello, World!
-        </h1>
+        <Suspense fallback={<p>Loading...</p>}>
+            {useRoutes(routes)}
+        </Suspense>
     );
 }
