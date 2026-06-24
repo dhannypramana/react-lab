@@ -110,7 +110,10 @@
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
     "cSpell.words": [
-        "Dhanny",
-        "Pramana"
+        "dhanny",
+        "pramana",
+        "njsproj",
+        "ntvs",
+        "vite"
     ]
 }
