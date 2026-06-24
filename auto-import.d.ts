@@ -7,10 +7,12 @@
 export {}
 declare global {
   const Activity: typeof import('react').Activity
+  const BreadcrumbBuilder: typeof import('./src/common/builders/BreadcrumbBuilder').BreadcrumbBuilder
   const Controller: typeof import('react-hook-form').Controller
   const ENDPOINT_PATH: typeof import('./src/common/constants/CommonConstant').ENDPOINT_PATH
   const ENDPOINT_VERSION: typeof import('./src/common/constants/CommonConstant').ENDPOINT_VERSION
   const Fragment: typeof import('react').Fragment
+  const HttpResponseErrorException: typeof import('./src/common/exceptions/HttpResponseErrorException').HttpResponseErrorException
   const K: typeof import('./src/common/utils/HelperUtil').K
   const Link: typeof import('react-router-dom').Link
   const MESSAGE: typeof import('./src/common/constants/CommonConstant').MESSAGE
@@ -23,6 +25,7 @@ declare global {
   const Routes: typeof import('react-router-dom').Routes
   const SORT_DIRECTION: typeof import('./src/common/constants/CommonConstant').SORT_DIRECTION
   const Suspense: typeof import('react').Suspense
+  const TableColumnBuilder: typeof import('./src/common/builders/TableColumnBuilder').TableColumnBuilder
   const addDays: typeof import('date-fns').addDays
   const any: typeof import('zod').any
   const array: typeof import('zod').array
@@ -124,11 +127,20 @@ declare global {
 // for type re-export
 declare global {
   // @ts-ignore
+  export type { BreadcrumbBuilder } from './src/common/builders/BreadcrumbBuilder'
+  import('./src/common/builders/BreadcrumbBuilder')
+  // @ts-ignore
+  export type { TableColumnBuilder } from './src/common/builders/TableColumnBuilder'
+  import('./src/common/builders/TableColumnBuilder')
+  // @ts-ignore
   export type { ExtendedAxiosRequestConfig, ExtendedInternalAxiosRequestConfig, AxiosErrorResponse } from './src/common/types/AxiosType'
   import('./src/common/types/AxiosType')
   // @ts-ignore
   export type { SortDirection, ObjectValues, ObjectKeys, Nullable, Undefined, SelectOption } from './src/common/types/CommonType'
   import('./src/common/types/CommonType')
+  // @ts-ignore
+  export type { Breadcrumb, TableColumn } from './src/common/types/ComponentType'
+  import('./src/common/types/ComponentType')
   // @ts-ignore
   export type { PrivilegeRequirement, PrivilegeMenu, PrivilegeGroupMenu } from './src/common/types/PrivilegeType'
   import('./src/common/types/PrivilegeType')
@@ -138,4 +150,7 @@ declare global {
   // @ts-ignore
   export type { ResponseStatus, GenericResponse, GenericPagination } from './src/common/types/ResponseType'
   import('./src/common/types/ResponseType')
+  // @ts-ignore
+  export type { HttpResponseErrorException } from './src/common/exceptions/HttpResponseErrorException'
+  import('./src/common/exceptions/HttpResponseErrorException')
 }
