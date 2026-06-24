@@ -8,13 +8,20 @@ export {}
 declare global {
   const Activity: typeof import('react').Activity
   const Controller: typeof import('react-hook-form').Controller
+  const ENDPOINT_PATH: typeof import('./src/common/constants/CommonConstant').ENDPOINT_PATH
+  const ENDPOINT_VERSION: typeof import('./src/common/constants/CommonConstant').ENDPOINT_VERSION
   const Fragment: typeof import('react').Fragment
+  const K: typeof import('./src/common/utils/HelperUtil').K
   const Link: typeof import('react-router-dom').Link
+  const MESSAGE: typeof import('./src/common/constants/CommonConstant').MESSAGE
   const NavLink: typeof import('react-router-dom').NavLink
   const Navigate: typeof import('react-router-dom').Navigate
   const Outlet: typeof import('react-router-dom').Outlet
+  const REDIRECT_KEY: typeof import('./src/common/constants/CommonConstant').REDIRECT_KEY
+  const RESPONSE: typeof import('./src/common/constants/CommonConstant').RESPONSE
   const Route: typeof import('react-router-dom').Route
   const Routes: typeof import('react-router-dom').Routes
+  const SORT_DIRECTION: typeof import('./src/common/constants/CommonConstant').SORT_DIRECTION
   const Suspense: typeof import('react').Suspense
   const addDays: typeof import('date-fns').addDays
   const any: typeof import('zod').any
@@ -26,8 +33,10 @@ declare global {
   const cacheSignal: typeof import('react').cacheSignal
   const clsx: typeof import('clsx').clsx
   const cn: typeof import('./src/common/utils/ClassUtil').cn
+  const containsOnlyNumbers: typeof import('./src/common/utils/HelperUtil').containsOnlyNumbers
   const create: typeof import('zustand').create
   const createContext: typeof import('react').createContext
+  const createObjectURL: typeof import('./src/common/utils/HelperUtil').createObjectURL
   const createRef: typeof import('react').createRef
   const cva: typeof import('class-variance-authority').cva
   const date: typeof import('zod').date
@@ -35,18 +44,32 @@ declare global {
   const env: typeof import('./src/common/utils/EnvironmentUtil').env
   const format: typeof import('date-fns').format
   const forwardRef: typeof import('react').forwardRef
+  const isArray: typeof import('./src/common/utils/HelperUtil').isArray
+  const isArrayExist: typeof import('./src/common/utils/HelperUtil').isArrayExist
+  const isNil: typeof import('./src/common/utils/HelperUtil').isNil
+  const isNull: typeof import('./src/common/utils/HelperUtil').isNull
+  const isNumber: typeof import('./src/common/utils/HelperUtil').isNumber
+  const isNumeric: typeof import('./src/common/utils/HelperUtil').isNumeric
+  const isUndefined: typeof import('./src/common/utils/HelperUtil').isUndefined
   const lazy: typeof import('react').lazy
   const literal: typeof import('zod').literal
   const memo: typeof import('react').memo
   const never: typeof import('zod').never
   const nullable: typeof import('zod').nullable
   const number: typeof import('zod').number
+  const numberOrNull: typeof import('./src/common/utils/HelperUtil').numberOrNull
+  const numberOrZero: typeof import('./src/common/utils/HelperUtil').numberOrZero
   const object: typeof import('zod').object
   const parseISO: typeof import('date-fns').parseISO
   const startTransition: typeof import('react').startTransition
   const string: typeof import('zod').string
+  const stringOrEmpty: typeof import('./src/common/utils/HelperUtil').stringOrEmpty
+  const stringOrNull: typeof import('./src/common/utils/HelperUtil').stringOrNull
   const subDays: typeof import('date-fns').subDays
   const throttle: typeof import('lodash-es').throttle
+  const toCapitalizeCase: typeof import('./src/common/utils/StringUtil').toCapitalizeCase
+  const toLowerCase: typeof import('./src/common/utils/StringUtil').toLowerCase
+  const toUpperCase: typeof import('./src/common/utils/StringUtil').toUpperCase
   const twMerge: typeof import('tailwind-merge').twMerge
   const undefined: typeof import('zod').undefined
   const union: typeof import('zod').union
@@ -91,7 +114,28 @@ declare global {
   const useTransformedParams: typeof import('./src/common/hooks/useTransformedParams').useTransformedParams
   const useTransition: typeof import('react').useTransition
   const useTranslation: typeof import('react-i18next').useTranslation
+  const valueOrFallback: typeof import('./src/common/utils/HelperUtil').valueOrFallback
+  const valueOrNull: typeof import('./src/common/utils/HelperUtil').valueOrNull
+  const valueOrStrip: typeof import('./src/common/utils/HelperUtil').valueOrStrip
   const zEnum: typeof import('zod').enum
   const zVoid: typeof import('zod').void
   const zodResolver: typeof import('@hookform/resolvers/zod').zodResolver
+}
+// for type re-export
+declare global {
+  // @ts-ignore
+  export type { ExtendedAxiosRequestConfig, ExtendedInternalAxiosRequestConfig, AxiosErrorResponse } from './src/common/types/AxiosType'
+  import('./src/common/types/AxiosType')
+  // @ts-ignore
+  export type { SortDirection, ObjectValues, ObjectKeys, Nullable, Undefined, SelectOption } from './src/common/types/CommonType'
+  import('./src/common/types/CommonType')
+  // @ts-ignore
+  export type { PrivilegeRequirement, PrivilegeMenu, PrivilegeGroupMenu } from './src/common/types/PrivilegeType'
+  import('./src/common/types/PrivilegeType')
+  // @ts-ignore
+  export type { ErrorType, ErrorValues, ErrorResponse } from './src/common/types/ResponseErrorType'
+  import('./src/common/types/ResponseErrorType')
+  // @ts-ignore
+  export type { ResponseStatus, GenericResponse, GenericPagination } from './src/common/types/ResponseType'
+  import('./src/common/types/ResponseType')
 }
