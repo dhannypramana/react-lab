@@ -11,6 +11,7 @@ declare global {
   const Controller: typeof import('react-hook-form').Controller
   const ENDPOINT_PATH: typeof import('./src/common/constants/CommonConstant').ENDPOINT_PATH
   const ENDPOINT_VERSION: typeof import('./src/common/constants/CommonConstant').ENDPOINT_VERSION
+  const Endpoint: typeof import('./src/common/endpoints/Endpoint').Endpoint
   const Fragment: typeof import('react').Fragment
   const HttpResponseErrorException: typeof import('./src/common/exceptions/HttpResponseErrorException').HttpResponseErrorException
   const K: typeof import('./src/common/utils/HelperUtil').K
@@ -150,6 +151,9 @@ declare global {
   // @ts-ignore
   export type { ResponseStatus, GenericResponse, GenericPagination } from './src/common/types/ResponseType'
   import('./src/common/types/ResponseType')
+  // @ts-ignore
+  export type { Endpoint } from './src/common/endpoints/Endpoint'
+  import('./src/common/endpoints/Endpoint')
   // @ts-ignore
   export type { HttpResponseErrorException } from './src/common/exceptions/HttpResponseErrorException'
   import('./src/common/exceptions/HttpResponseErrorException')
