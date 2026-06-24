@@ -25,6 +25,7 @@ declare global {
   const cache: typeof import('react').cache
   const cacheSignal: typeof import('react').cacheSignal
   const clsx: typeof import('clsx').clsx
+  const cn: typeof import('./src/common/utils/ClassUtil').cn
   const create: typeof import('zustand').create
   const createContext: typeof import('react').createContext
   const createRef: typeof import('react').createRef
