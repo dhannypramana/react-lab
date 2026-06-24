@@ -110,10 +110,11 @@
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
     "cSpell.words": [
+        "commitlint",
         "dhanny",
-        "pramana",
         "njsproj",
         "ntvs",
+        "pramana",
         "vite"
     ]
 }
